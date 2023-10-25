@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.drawer-side a.active{
+    color: white;
+}
+
+.menu a:hover a.active{
+    background-color: transparent;
+}
+
+.cinzel{
+    font-family: 'Cinzel', serif;
+}
+.inter{
+    font-family: 'Inter', sans-serif;
+}
+.raleway{
+    font-family: 'Raleway', sans-serif;
+}
+
+label{
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+input, textarea{
+    padding: 20px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid #E8E8E8;
+}

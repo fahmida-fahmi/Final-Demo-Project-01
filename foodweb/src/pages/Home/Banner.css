@@ -1,0 +1,8 @@
+.thumbs{
+    display: flex;
+    justify-content: center;
+}
+.mySwiper{
+    /* width: 1320px; */
+    position: relative;
+}

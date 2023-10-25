@@ -1,0 +1,16 @@
+.parallax{
+    height: 100vh;
+    position: relative;
+}
+.parallax::before {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%; 
+  width: 100%;
+  background: rgba(0, 0, 0, 0.651);
+}
