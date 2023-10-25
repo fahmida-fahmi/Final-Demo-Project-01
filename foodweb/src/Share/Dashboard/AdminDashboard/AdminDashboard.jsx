@@ -4,10 +4,10 @@ import { TfiMenuAlt } from "react-icons/tfi";
 import { FaBook } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
-import useUsers from "../../pages/useUsers/useUsers";
-import useAuth from "../../pages/useAuth/useAuth";
+import useUsers from "../../../pages/useUsers/useUsers";
+import useAuth from "../../../pages/useAuth/useAuth";
 import Swal from "sweetalert2";
-import useCart from "../../pages/useCart/UseCart";
+import useCart from "../../../pages/useCart/UseCart";
 
 const AdminDashboard = () => {
     const [cart] = useCart()

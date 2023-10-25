@@ -1,8 +1,6 @@
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.png'
 import { FaCircleUser, FaCartPlus } from "react-icons/fa6";
-// import cart from '../../../assets/icon/cart.png'
 import './header.css'
 import { AuthProvider } from '../Context/Context';
 import Swal from 'sweetalert2';

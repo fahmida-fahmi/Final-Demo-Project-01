@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from 'react';
-import { AuthProvider } from '../../Share/Context/Context';
+import  {  useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import useAuth from '../useAuth/useAuth';

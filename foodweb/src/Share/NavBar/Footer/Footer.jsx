@@ -1,4 +1,3 @@
-import React from 'react';
 import Copy from './Copy';
 import Contact from './Contact';
 import FollowUs from './FollowUs';

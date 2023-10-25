@@ -1,6 +1,4 @@
-import { useQueries, useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import React from 'react';
+import {  useQuery } from '@tanstack/react-query';
 import useAxiosCart from '../useCart/useAxiosCart';
 
 const useUsers = () => {

@@ -1,8 +1,6 @@
-import React from 'react';
-import Header from '../Header/Header';
 import { Outlet } from 'react-router-dom';
-import { FaOtter } from 'react-icons/fa6';
-import Footer from '../Footer/Footer';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
 
 const NavBar = () => {
     return (

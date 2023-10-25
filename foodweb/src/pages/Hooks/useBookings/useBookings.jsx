@@ -1,6 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import { useContext } from 'react';
-import { AuthProvider } from '../../Share/Context/Context';
 import useAxiosCart from '../useCart/useAxiosCart';
 import useAuth from '../useAuth/useAuth';
 

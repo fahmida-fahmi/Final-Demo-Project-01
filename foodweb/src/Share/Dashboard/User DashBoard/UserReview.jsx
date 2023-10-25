@@ -1,11 +1,9 @@
-import React, { useContext, useState } from 'react';
-import SectionTitle from '../Share/SectionTitle/SectionTitle';
+import  { useContext, useState } from 'react';
+import SectionTitle from '../../SectionTitle/SectionTitle';
 import { GrSend } from 'react-icons/gr';
 import { Rating } from '@smastrom/react-rating';
-import { AuthProvider } from '../Share/Context/Context';
-import useBookings from '../pages/useBookings/useBookings';
+import { AuthProvider } from '../../Context/Context';
 import Swal from 'sweetalert2';
-import { useForm } from 'react-hook-form';
 
 const UserReview = () => {
     const [rating, setRating] = useState(0)
