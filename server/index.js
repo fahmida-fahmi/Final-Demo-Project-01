@@ -12,6 +12,7 @@ const jwtRouter = require("./Router/jwt");
 const paymentRoute = require("./Router/paymentRouter");
 const adminRoute = require("./Router/adminRoute");
 const createPaymentRoute = require("./Router/createPaymentIntent");
+const authRoute = require("./Router/authRouter");
 require("dotenv").config();
 
 app.use(express.static('public'))
@@ -37,6 +38,7 @@ app.use('/create-payment-intent', createPaymentRoute)
 app.use('/payments', paymentRoute)
 
 app.use('/admin', adminRoute)
+
 
 
 

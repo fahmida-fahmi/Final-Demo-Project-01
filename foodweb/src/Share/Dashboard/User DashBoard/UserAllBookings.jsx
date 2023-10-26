@@ -1,9 +1,7 @@
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Swal from 'sweetalert2';
-import useBookings from '../pages/useBookings/useBookings';
-import SectionTitle from '../Share/SectionTitle/SectionTitle';
-import useAuth from "../pages/useAuth/useAuth";
-import { Link } from "react-router-dom";
+import useBookings from "../../../pages/Hooks/useBookings/useBookings";
+import SectionTitle from "../../SectionTitle/SectionTitle";
 
 
 const UserAllBookings = () => {

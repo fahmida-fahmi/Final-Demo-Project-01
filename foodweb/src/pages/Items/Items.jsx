@@ -1,4 +1,3 @@
-import React from 'react';
 import SectionTitle from '../../Share/SectionTitle/SectionTitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 

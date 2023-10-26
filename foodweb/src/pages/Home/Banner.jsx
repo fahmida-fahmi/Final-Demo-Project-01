@@ -1,4 +1,3 @@
-import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import banner1 from '../../../assets/home/01.jpg'

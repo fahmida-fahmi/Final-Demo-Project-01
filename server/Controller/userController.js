@@ -1,35 +1,39 @@
 const User = require("../Model/User");
+const bcrypt = require('bcryptjs');
 
-exports.createUser = async(req, res) => {
-    // function createUser(req, res) {
-    const { name, email, password } = req.body;
-    const query = { email };
-    const existingUser = await User.findOne(query);
-    
-    if (existingUser) {
-      return res.send({ message: 'user already exists' })
-    }
+exports.createUser = async (req, res) => {
+  const { name, email, password } = req.body;
+  const query = { email };
+  const existingUser = await User.findOne(query);
 
-    const user = new User({
-      name,
-      password,
-      email,
-      role: 'user'
+  if (existingUser) {
+      return res.json({ message: 'User already exists' });
+  }
 
-    });
-    
-    user
-      .save()
-      .then((data) => {
-        res.json({
-          message: "successfully inserted",
-          data,
-        });
-      })
-      .catch((error) => {
-        res.json({ error: error });
+  try {
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(password, salt);
+
+      const user = new User({
+          name,
+          password: hashedPassword,
+          email,
+          role: 'user'
       });
-  };
+
+      user.save()
+          .then((data) => {
+              return res.json({ message: 'User successfully inserted', data });
+          })
+          .catch((error) => {
+              console.error(error);
+              return res.status(500).json({ message: 'Error saving user' });
+          });
+  } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: 'Error hashing password' });
+  }
+};
 
 exports.getAllUser = async (req, res) =>{
   const users = await User.find()

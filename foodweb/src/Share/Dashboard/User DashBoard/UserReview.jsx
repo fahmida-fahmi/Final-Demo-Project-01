@@ -1,14 +1,14 @@
-import  { useContext, useState } from 'react';
-import SectionTitle from '../../SectionTitle/SectionTitle';
+import  {  useState } from 'react';
 import { GrSend } from 'react-icons/gr';
 import { Rating } from '@smastrom/react-rating';
-import { AuthProvider } from '../../Context/Context';
 import Swal from 'sweetalert2';
+import useAuth from '../../../pages/Hooks/useAuth/useAuth';
+import SectionTitle from '../../SectionTitle/SectionTitle';
 
 const UserReview = () => {
     const [rating, setRating] = useState(0)
 
-    const { user } = useContext(AuthProvider)
+    const { user } = useAuth()
     console.log(user.email);
     const addReview = (e) => {
         e.preventDefault()

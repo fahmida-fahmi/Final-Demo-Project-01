@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SectionTitle = ({subtitle, header}) => {
     // console.log(subtitle,header);

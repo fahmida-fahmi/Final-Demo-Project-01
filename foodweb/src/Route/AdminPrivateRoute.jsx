@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
-import Context, { AuthProvider } from '../Share/Context/Context';
+
 import { Navigate, useLocation } from 'react-router-dom';
-import useAuth from '../pages/useAuth/useAuth';
-import useAdmin from '../pages/useAdmin';
-import useUsers from '../pages/useUsers/useUsers';
+import useAuth from '../pages/Hooks/useAuth/useAuth';
+import useAdmin from '../pages/Hooks/useAdmin';
+import useUsers from '../pages/Hooks/useUsers/useUsers';
 
 const AdminPrivateRoute = ({children}) => {
     const {user, loading} = useAuth()

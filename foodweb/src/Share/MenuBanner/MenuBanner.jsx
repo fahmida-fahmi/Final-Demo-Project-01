@@ -1,5 +1,4 @@
-import React from 'react';
-import banner from '../../../assets/home/chef-service.jpg'
+
 const MenuBanner = ({banner,name}) => {
     return (
         <div className='w-100% h-[600px] py-20 mb-20' style={{background: `url(${banner})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>

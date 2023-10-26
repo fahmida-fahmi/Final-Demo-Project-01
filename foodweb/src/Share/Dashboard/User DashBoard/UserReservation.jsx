@@ -1,13 +1,13 @@
 import  { useContext } from 'react';
-import ContactCardMap from '../pages/Contact/ContactCardMap';
-import SectionTitle from '../Share/SectionTitle/SectionTitle';
 import { GrSend } from 'react-icons/gr';
-import { AuthProvider } from '../Share/Context/Context';
-import useServices from '../pages/useServices/useServices';
 import Swal from 'sweetalert2';
+import useAuth from '../../../pages/Hooks/useAuth/useAuth';
+import useServices from '../../../pages/Hooks/useServices/useServices';
+import SectionTitle from '../../SectionTitle/SectionTitle';
+import ContactCardMap from '../../../pages/Contact/ContactCardMap';
 
 const UserReservation = () => {
-    const { user } = useContext(AuthProvider)
+    const { user } = useAuth()
     const [services] = useServices()
     console.log(services);
     const handleBooking = e => {

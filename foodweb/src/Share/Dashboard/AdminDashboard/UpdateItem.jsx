@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { useLoaderData } from 'react-router-dom';
 
@@ -47,7 +46,7 @@ const UpdateItem = () => {
             <h1 className='text-5xl uppercase my-20 text-center'>Update Item</h1>
 
             <form
-                action=""
+                
                 className='w-2/3 mx-auto bg-[#F3F3F3] p-10'
                 onSubmit={handleAddItem}
             >

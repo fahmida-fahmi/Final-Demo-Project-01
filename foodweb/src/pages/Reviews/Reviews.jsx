@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import SectionTitle from '../../Share/SectionTitle/SectionTitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles

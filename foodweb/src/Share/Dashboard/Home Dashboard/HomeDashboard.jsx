@@ -1,5 +1,4 @@
-import React from 'react';
-import img  from '../../../assets/others/cupcake-dribbble.gif'
+import img from '../../../../assets/others/cupcake-dribbble.gif'
 const HomeDashboard = () => {
     return (
         <div className='bg-white h-[100vh] flex justify-center flex-col items-center'>

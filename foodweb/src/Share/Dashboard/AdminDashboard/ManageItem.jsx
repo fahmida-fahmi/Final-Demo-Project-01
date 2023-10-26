@@ -1,14 +1,11 @@
-import React from 'react';
-import useCart from '../../pages/useCart/UseCart';
 import Swal from 'sweetalert2';
-import useServices from '../../pages/useServices/useServices';
-import SectionTitle from '../SectionTitle/SectionTitle';
+
 import { FaRegEdit } from 'react-icons/fa';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import Login from '../../pages/Login/Login';
-import useAxiosCart from '../../pages/useCart/useAxiosCart';
-import useBookings from '../../pages/useBookings/useBookings';
+import useAxiosCart from '../../../pages/Hooks/useCart/useAxiosCart';
+import SectionTitle from '../../SectionTitle/SectionTitle';
+import useServices from '../../../pages/Hooks/useServices/useServices';
 
 const ManageItem = () => {
     const [services, refetch] = useServices()

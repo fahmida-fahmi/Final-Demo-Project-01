@@ -1,10 +1,9 @@
-import React from 'react';
-import SectionTitle from '../SectionTitle/SectionTitle';
-import { GrSend } from 'react-icons/gr';
-import { BiRestaurant } from 'react-icons/bi';
+
 import { useForm } from 'react-hook-form';
-import useAxiosCart from '../../pages/useCart/useAxiosCart';
 import Swal from 'sweetalert2';
+import useAxiosCart from '../../../pages/Hooks/useCart/useAxiosCart';
+import SectionTitle from '../../SectionTitle/SectionTitle';
+
 
 
 const imageUploadToken = import.meta.env.VITE_image_upload_token

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaFacebookF,FaInstagram,FaTwitter } from "react-icons/fa";
 const FollowUs = () => {
     return (

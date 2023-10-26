@@ -3,9 +3,9 @@ const Payment = require("../Model/Payment");
 const Bookings = require("../Model/Payment");
 
 // never do this 
-// const stripe = require("stripe")('sk_test_51O4NTuDLmF7zT256F2qSrdYJLJUfTmH7ynUEBSZQ2q1cBXLka48G5th0kE9o6IWpPHyK2Fbs9f4UmsA7Td2Us3As00S79GCfda');
+const stripe = require("stripe")('sk_test_51O4NTuDLmF7zT256F2qSrdYJLJUfTmH7ynUEBSZQ2q1cBXLka48G5th0kE9o6IWpPHyK2Fbs9f4UmsA7Td2Us3As00S79GCfda');
 
-const stripe = require("stripe")(process.env.ACCESS_TOKEN_SECRET);
+// const stripe = require("stripe")(process.env.ACCESS_TOKEN_SECRET);
 
 
 exports.createPayment = async (req, res) => {
@@ -31,9 +31,9 @@ exports.postPaymentInfo = async (req, res) => {
     const query = { _id: { $in: payment.cartItems.map(id => new Object(id)) } }
     
     const deleteCarts = await Carts.deleteMany(query)
-    const deletePayments = await Bookings.deleteMany(query)
+    // const deletePayments = await Bookings.deleteMany(query)
 
-    res.send({ insertResult, deleteCarts, deletePayments });
+    res.send({ insertResult, deleteCarts });
 };
 
 exports.getAllPayments = async(req, res) =>{

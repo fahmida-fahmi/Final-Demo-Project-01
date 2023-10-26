@@ -1,9 +1,7 @@
 import { Elements } from '@stripe/react-stripe-js';
-import React from 'react';
-import { GrSend } from 'react-icons/gr';
 import CheckoutForm from './CheckoutForm';
 import { loadStripe } from '@stripe/stripe-js';
-import useCart from '../../pages/useCart/UseCart';
+import useCart from '../../../../pages/Hooks/useCart/useCart';
 
 const stripePromise = loadStripe(import.meta.env.VITE_payment_public_key);
 

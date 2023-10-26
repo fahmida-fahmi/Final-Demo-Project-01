@@ -1,10 +1,8 @@
-import React from 'react';
-import useServices from '../../pages/useServices/useServices';
 import Swal from 'sweetalert2';
-import SectionTitle from '../SectionTitle/SectionTitle';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
-import useUsers from '../../pages/useUsers/useUsers';
 import { FaUserShield } from 'react-icons/fa6';
+import useUsers from '../../../pages/Hooks/useUsers/useUsers';
+import SectionTitle from '../../SectionTitle/SectionTitle';
 
 const AllUsersManage = () => {
     const [users, refetch] = useUsers()

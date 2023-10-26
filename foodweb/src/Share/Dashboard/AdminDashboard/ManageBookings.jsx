@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import Swal from 'sweetalert2';
-import SectionTitle from '../SectionTitle/SectionTitle';
-import { MdDone } from "react-icons/md";
 import { LuFileWarning } from "react-icons/lu";
-import useBookings from '../../pages/useBookings/useBookings';
+import SectionTitle from '../../SectionTitle/SectionTitle';
+import useBookings from '../../../pages/Hooks/useBookings/useBookings';
 
 const ManageBookings = () => {
     const [bookings, setBookings] = useBookings()

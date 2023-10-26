@@ -6,24 +6,23 @@ import Contact from "../pages/Contact/Contact";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import OurShop from "../pages/OurShop/OurShop";
-import UserDashboard from "../User DashBoard/UserDashboard";
-import UserHome from "../User DashBoard/UserHome";
-import PaymentHistory from "../User DashBoard/paymentHistory";
-import MyCart from "../User DashBoard/MyCart";
-import UserReview from "../User DashBoard/UserReview";
-import UserReservation from "../User DashBoard/UserReservation";
-import UserReservationPayment from "../User DashBoard/payment/UserReservationPayment";
-import UserAllBookings from "../User DashBoard/UserAllBookings";
-import AdminDashboard from "../Share/AdminDashboard/AdminDashboard";
-import AdminAddItemPage from "../Share/AdminDashboard/AdminAddItemPage";
-import ManageItem from "../Share/AdminDashboard/ManageItem";
-import UpdateItem from "../Share/AdminDashboard/UpdateItem";
-import AllUsersManage from "../Share/AdminDashboard/AllUsersManage";
-import ManageBookings from "../Share/AdminDashboard/ManageBookings";
-import DashboardHeader from "../User DashBoard/DashboardHeader";
+
+
 import PrivateRoute from "./PrivateRoute";
 import AdminPrivateRoute from "./AdminPRivateRoute";
-import HomeDashboard from "../Share/Home Dashboard/HomeDashboard";
+import PaymentHistory from "../Share/Dashboard/User DashBoard/PaymentHistory";
+import MyCart from "../Share/Dashboard/User DashBoard/MyCart";
+import UserReview from "../Share/Dashboard/User DashBoard/UserReview";
+import UserReservation from "../Share/Dashboard/User DashBoard/UserReservation";
+import UserAllBookings from "../Share/Dashboard/User DashBoard/UserAllBookings";
+import AdminAddItemPage from "../Share/Dashboard/AdminDashboard/AdminAddItemPage";
+import UserReservationPayment from "../Share/Dashboard/User DashBoard/payment/UserReservationPayment";
+import UpdateItem from "../Share/Dashboard/AdminDashboard/UpdateItem";
+import ManageItem from "../Share/Dashboard/AdminDashboard/ManageItem";
+import ManageBookings from "../Share/Dashboard/AdminDashboard/ManageBookings";
+import AllUsersManage from "../Share/Dashboard/AdminDashboard/AllUsersManage";
+import HomeDashboard from "../Share/Dashboard/Home Dashboard/HomeDashboard";
+import AdminDashboard from "../Share/Dashboard/Home Dashboard/AdminDashboard";
 
 const router = createBrowserRouter([
   {
@@ -72,7 +71,7 @@ const router = createBrowserRouter([
       // },
       {
         path: 'payment',
-        element: <UserReservationPayment></UserReservationPayment>
+        element: <UserReservationPayment></UserReservationPayment>,
       },
       {
         path: 'paymentHistory',

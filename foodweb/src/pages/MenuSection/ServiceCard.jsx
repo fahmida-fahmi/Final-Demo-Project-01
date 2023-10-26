@@ -2,7 +2,8 @@ import  { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthProvider } from '../../Share/Context/Context';
 import Swal from 'sweetalert2';
-import useCart from '../useCart/UseCart';
+import useCart from '../Hooks/useCart/useCart';
+// import useCart from '../useCart/UseCart';
 
 const ServiceCard = ({service}) => {
     const {name, image, price, recipe, category} = service

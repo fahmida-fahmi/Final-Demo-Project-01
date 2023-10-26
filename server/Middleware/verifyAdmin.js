@@ -15,3 +15,6 @@ exports.verifyAdmin = async (req, res, next) =>{
     }
     
 }
+
+
+// middleware always get 3 parameters req, res, next 

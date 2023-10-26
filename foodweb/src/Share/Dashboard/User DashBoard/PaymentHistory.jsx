@@ -1,7 +1,4 @@
-// import React from 'react';
-
-import { useState } from "react";
-import usePayments from "../pages/Hooks/Payments/usePayments";
+import usePayments from "../../../pages/Hooks/usePayments/usePayments";
 
 const PaymentHistory = () => {
 

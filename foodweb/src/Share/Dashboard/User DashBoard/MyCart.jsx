@@ -1,12 +1,10 @@
 import React from 'react';
-import SectionTitle from '../Share/SectionTitle/SectionTitle';
-import useCart from '../pages/useCart/useCart';
-import { key } from 'localforage';
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
-import useBookings from '../pages/useBookings/useBookings';
-import useAuth from '../pages/useAuth/useAuth';
+import useCart from '../../../pages/Hooks/useCart/useCart';
+import SectionTitle from '../../SectionTitle/SectionTitle';
+
 
 const MyCart = () => {
     const [cart,refetch] = useCart()

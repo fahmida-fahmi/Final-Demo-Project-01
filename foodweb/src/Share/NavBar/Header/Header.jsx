@@ -1,13 +1,12 @@
-import  { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCircleUser, FaCartPlus } from "react-icons/fa6";
 import './header.css'
-import { AuthProvider } from '../Context/Context';
 import Swal from 'sweetalert2';
-import useCart from '../../pages/useCart/UseCart';
+import useAuth from '../../../pages/Hooks/useAuth/useAuth';
+import useCart from '../../../pages/Hooks/useCart/useCart';
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthProvider)
+    const { user, logOut } = useAuth()
 
     const [cart] = useCart()
 

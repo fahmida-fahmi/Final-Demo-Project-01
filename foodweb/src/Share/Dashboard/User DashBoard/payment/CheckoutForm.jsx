@@ -1,7 +1,8 @@
-import { CardElement, PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React, { useEffect, useState } from 'react';
-import useAxiosCart from '../../pages/useCart/useAxiosCart';
-import useAuth from '../../pages/useAuth/useAuth';
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { useEffect, useState } from 'react';
+import useAuth from '../../../../pages/Hooks/useAuth/useAuth';
+import useAxiosCart from '../../../../pages/Hooks/useCart/useAxiosCart';
+
 
 
 const CheckoutForm = ({ price, cart }) => {

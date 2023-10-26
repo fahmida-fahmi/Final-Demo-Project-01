@@ -101,7 +101,7 @@ const Login = () => {
             <div className='grid grid-cols-2 w-2/3 mx-auto items-center border-2 p-20 shadow-xl' style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
                 <img src={logoImg} alt="" />
                 <div>
-                    <form action="" className='' onSubmit={handleLogin}>
+                    <form  className='' onSubmit={handleLogin}>
                         <div>
                             <label htmlFor="">Email</label>
                             <br />
