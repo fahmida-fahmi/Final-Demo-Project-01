@@ -125,7 +125,7 @@ const AdminAddItemPage = () => {
                 subtitle={`what's new?`}
             ></SectionTitle>
 
-            {/* <form className='w-2/3 mx-auto bg-[#F3F3F3] p-10' onSubmit={handleSubmit(onSubmit)}>
+            <form className='w-2/3 mx-auto bg-[#F3F3F3] p-10' onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="">Recipe name*</label>
                 <input type="text" placeholder="Recipe Name"
                         {...register("name", { required: true, maxLength: 120 })}
@@ -154,8 +154,8 @@ const AdminAddItemPage = () => {
                 
                 <input  type="submit" value='Add Item' className='btn w-1/3 mx-auto py-5 flex ' />
   
-            </form>  */}
-             <form className='w-2/3 mx-auto bg-[#F3F3F3] p-10' onSubmit={handleSubmit(onSubmit)}>
+            </form> 
+             {/* <form className='w-2/3 mx-auto bg-[#F3F3F3] p-10' onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">
                     <label className="label">
                         <span className="label-text font-semibold">Recipe Name*</span>
@@ -198,7 +198,7 @@ const AdminAddItemPage = () => {
                     <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered w-full " />
                 </div>
                 <input className="btn btn-sm mt-4" type="submit" value="Add Item" />
-            </form> 
+            </form>  */}
         </div>
 
     );
