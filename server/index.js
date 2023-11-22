@@ -21,6 +21,14 @@ app.use(cors());
 
 // app.use(express.urlencoded({extended: true}))
 
+app.use(cors(
+  {
+    origin: ["https://deploy-mern-lwhq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+))
+
 app.use('/jwt', jwtRouter)
 
 app.use('/users', router)

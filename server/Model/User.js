@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 // const Schema = mongoose.Schema;
+const bcrypt = require('bcryptjs');
+
 const {Schema} = mongoose
 
 const userSchema = new Schema(
@@ -24,6 +26,11 @@ const userSchema = new Schema(
   },
   { timestamps: true }
 );
+
+userSchema.methods.comparePassword = async (candidatePassword, userPassword) => {
+  console.log('inside method');
+  return await bcrypt.compare(candidatePassword, userPassword)
+}
 
 const User = mongoose.model('User',userSchema)
 

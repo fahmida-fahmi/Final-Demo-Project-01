@@ -35,6 +35,37 @@ exports.createUser = async (req, res) => {
   }
 };
 
+exports.login= async(req, res) =>{
+  // 1. get data
+  const { email, password} = req.body 
+  if(!email || !password){
+    return res.send({
+      message: 'email or password is empty'
+    })
+  }
+
+  // 2. user exit 
+  const user = await User.findOne({email})
+  if(!user){
+    return res.json({
+      message: 'user not found'
+    })
+  }
+  // 3. password matching 
+  const result = await user.comparedPassword(password, user.password)
+
+  if(!result){
+    return res.json({
+      message: 'wrong password'
+    })
+  }
+  // 4. send token
+
+  res.json({
+    msg: ""
+  })
+}
+
 exports.getAllUser = async (req, res) =>{
   const users = await User.find()
   res.send(users)

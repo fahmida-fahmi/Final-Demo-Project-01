@@ -1,4 +1,4 @@
-const Reg = require("../Model/Reg");
+// const Reg = require("../Model/Reg");
 // const User = require("../Model/User")
 const bcrypt = require('bcryptjs');
 
