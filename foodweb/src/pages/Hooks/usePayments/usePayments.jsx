@@ -12,6 +12,7 @@ const usePayments = () => {
         enabled: !loading,
         queryFn: async () =>{
             const res = await axiosSecure.get(`/payments?email=${user?.email}`)
+            console.log(res.data);
             return res.data
         }
     })

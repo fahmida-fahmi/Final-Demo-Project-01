@@ -48,7 +48,7 @@ const MyCart = () => {
             <div className='w-2/3 mx-auto bg-white py-16 px-8 text-black font-bold'>
                 <div className='cinzel uppercase text-2xl grid grid-cols-3 mb-10'>
                     <h1>total orders: {cart.length}</h1>
-                    <h1>total price: $ {items}</h1>
+                    <h1>total price: $ {parseFloat(items.toFixed(2))}</h1>
                     <Link to='/dashboard/payment' className='btn btn-success'>pay</Link>
                 </div>
                 <div className="overflow-x-auto rounded-t-lg">

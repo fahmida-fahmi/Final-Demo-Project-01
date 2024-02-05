@@ -130,6 +130,10 @@ const router = createBrowserRouter([
 
     ]
   },
+  {
+    path: 'donate',
+    element: <PrivateRoute></PrivateRoute>
+  }
   // {
   //   path: 'admin',
   //   element: <AdminDashboard/>,

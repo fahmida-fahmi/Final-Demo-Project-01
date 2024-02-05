@@ -98,6 +98,7 @@ const CheckoutForm = ({ price, cart }) => {
                 })
         }
     }
+    // console.log(clientSecret);
 
     return (
         <>

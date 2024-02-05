@@ -7,7 +7,8 @@ const useAxiosCart = () => {
     const {logOut} = useAuth()
     const navigate = useNavigate()
     const axiosSecure = axios.create({
-        baseURL: 'https://demo-project-api.vercel.app',
+        // baseURL: 'https://demo-project-api.vercel.app',
+        baseURL: 'http://localhost:8000',
     })
 
     useEffect(()=>{

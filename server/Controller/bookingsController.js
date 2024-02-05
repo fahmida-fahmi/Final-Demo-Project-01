@@ -1,9 +1,16 @@
 const  Bookings  = require("../Model/Bookings")
 
 exports.addBookings = async(req,res) =>{
-    const bookings = req.body 
-    const result = await Bookings.insertMany(bookings)
-    res.send(result)
+
+    try{
+        const bookings = req.body 
+        const result = await Bookings.insertMany(bookings)
+        res.send(result)
+    }
+    catch (error) {
+        console.error("Error retrieving users:", error);
+        res.status(500).json({ error: "An error occurred while fetching users." });
+      }
 }
 
 // exports.getAllBookings = async (req,res) =>{

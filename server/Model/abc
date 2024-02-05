@@ -1,0 +1,243 @@
+ [
+        {
+          "recipe_name": "Spaghetti Bolognese",
+          "ingredients": [
+            "1 lb ground beef",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "1 can (28 oz) crushed tomatoes",
+            "1/4 cup tomato paste",
+            "1 teaspoon dried oregano",
+            "1 teaspoon dried basil",
+            "Salt and pepper to taste",
+            "8 oz spaghetti",
+            "Grated Parmesan cheese for topping"
+          ],
+          "price_bdt": 1500,
+          "nutritional_value": {
+            "calories": 400,
+            "protein": 20,
+            "carbohydrates": 40,
+            "fat": 15,
+            "fiber": 5
+          },
+          "image": "https://example.com/spaghetti_bolognese.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Chicken Alfredo Pasta",
+          "ingredients": [
+            "8 oz fettuccine pasta",
+            "2 chicken breasts, grilled and sliced",
+            "2 cups heavy cream",
+            "1/2 cup unsalted butter",
+            "1 cup grated Parmesan cheese",
+            "2 cloves garlic, minced",
+            "Salt and pepper to taste",
+            "Chopped parsley for garnish"
+          ],
+          "price_bdt": 1800,
+          "nutritional_value": {
+            "calories": 600,
+            "protein": 30,
+            "carbohydrates": 45,
+            "fat": 35,
+            "fiber": 2
+          },
+          "image": "https://example.com/chicken_alfredo_pasta.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Vegetarian Stir-Fry",
+          "ingredients": [
+            "2 cups broccoli florets",
+            "1 bell pepper, sliced",
+            "1 carrot, julienned",
+            "1 cup snap peas",
+            "1 block firm tofu, cubed",
+            "3 tablespoons soy sauce",
+            "1 tablespoon sesame oil",
+            "1 tablespoon cornstarch",
+            "2 tablespoons vegetable oil",
+            "Cooked brown rice for serving"
+          ],
+          "price_bdt": 1200,
+          "nutritional_value": {
+            "calories": 300,
+            "protein": 15,
+            "carbohydrates": 30,
+            "fat": 15,
+            "fiber": 8
+          },
+          "image": "https://example.com/vegetarian_stir_fry.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Beef Tacos",
+          "ingredients": [
+            "1 lb ground beef",
+            "1 packet taco seasoning",
+            "1 cup shredded lettuce",
+            "1 cup diced tomatoes",
+            "1/2 cup shredded cheddar cheese",
+            "1/4 cup diced onions",
+            "Sour cream and salsa for topping",
+            "Hard taco shells"
+          ],
+          "price_bdt": 1400,
+          "nutritional_value": {
+            "calories": 350,
+            "protein": 25,
+            "carbohydrates": 20,
+            "fat": 18,
+            "fiber": 4
+          },
+          "image": "https://example.com/beef_tacos.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Salmon with Lemon-Dill Sauce",
+          "ingredients": [
+            "4 salmon fillets",
+            "1/4 cup fresh lemon juice",
+            "2 tablespoons olive oil",
+            "2 cloves garlic, minced",
+            "1 tablespoon chopped fresh dill",
+            "Salt and pepper to taste",
+            "Lemon slices for garnish"
+          ],
+          "price_bdt": 2000,
+          "nutritional_value": {
+            "calories": 450,
+            "protein": 30,
+            "carbohydrates": 2,
+            "fat": 35,
+            "fiber": 1
+          },
+          "image": "https://example.com/salmon_lemon_dill_sauce.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Vegetable Lasagna",
+          "ingredients": [
+            "9 lasagna noodles, cooked",
+            "2 cups ricotta cheese",
+            "1 egg",
+            "2 cups shredded mozzarella cheese",
+            "2 cups marinara sauce",
+            "1 zucchini, thinly sliced",
+            "1 yellow squash, thinly sliced",
+            "1 cup spinach leaves",
+            "1/2 cup grated Parmesan cheese",
+            "Fresh basil for garnish"
+          ],
+          "price_bdt": 1600,
+          "nutritional_value": {
+            "calories": 380,
+            "protein": 20,
+            "carbohydrates": 35,
+            "fat": 18,
+            "fiber": 5
+          },
+          "image": "https://example.com/vegetable_lasagna.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Shrimp Scampi",
+          "ingredients": [
+            "8 oz linguine pasta",
+            "1 lb large shrimp, peeled and deveined",
+            "4 cloves garlic, minced",
+            "1/2 cup white wine",
+            "1/4 cup chicken broth",
+            "2 tablespoons lemon juice",
+            "2 tablespoons chopped fresh parsley",
+            "Salt and red pepper flakes to taste",
+            "2 tablespoons olive oil"
+          ],
+          "price_bdt": 2200,
+          "nutritional_value": {
+            "calories": 400,
+            "protein": 25,
+            "carbohydrates": 40,
+            "fat": 15,
+            "fiber": 2
+          },
+          "image": "https://example.com/shrimp_scampi.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Chicken Parmesan",
+          "ingredients": [
+            "4 boneless, skinless chicken breasts",
+            "1 cup breadcrumbs",
+            "1/2 cup grated Parmesan cheese",
+            "2 eggs, beaten",
+            "2 cups marinara sauce",
+            "1 cup shredded mozzarella cheese",
+            "1/4 cup chopped fresh basil",
+            "Cooked spaghetti for serving"
+          ],
+          "price_bdt": 1800,
+          "nutritional_value": {
+            "calories": 450,
+            "protein": 30,
+            "carbohydrates": 25,
+            "fat": 20,
+            "fiber": 3
+          },
+          "image": "https://example.com/chicken_parmesan.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Vegetarian Enchiladas",
+          "ingredients": [
+            "1 can (15 oz) black beans, drained and rinsed",
+            "1 cup corn kernels",
+            "1 cup diced bell peppers",
+            "1 cup diced onions",
+            "2 cups enchilada sauce",
+            "8 corn tortillas",
+            "2 cups shredded cheddar cheese",
+            "Chopped cilantro for garnish",
+            "Sour cream for serving"
+          ],
+          "price_bdt": 1400,
+          "nutritional_value": {
+            "calories": 320,
+            "protein": 15,
+            "carbohydrates": 30,
+            "fat": 18,
+            "fiber": 6
+          },
+          "image": "https://example.com/vegetarian_enchiladas.jpg",
+          "category": "main_course"
+        },
+        {
+          "recipe_name": "Beef and Broccoli Stir-Fry",
+          "ingredients": [
+            "1 lb flank steak, thinly sliced",
+            "2 cups broccoli florets",
+            "1/2 cup soy sauce",
+            "2 tablespoons oyster sauce",
+            "1 tablespoon cornstarch",
+            "1 tablespoon sesame oil",
+            "2 cloves garlic, minced",
+            "1 teaspoon grated ginger",
+            "Cooked white rice for serving",
+            "Sesame seeds for garnish"
+          ],
+          "price_bdt": 1600,
+          "nutritional_value": {
+            "calories": 380,
+            "protein": 25,
+            "carbohydrates": 30,
+            "fat": 18,
+            "fiber": 5
+          },
+          "image": "https://example.com/beef_broccoli_stir_fry.jpg",
+          "category": "main_course"
+        }
+      ]
+
+  

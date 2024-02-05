@@ -3,6 +3,7 @@ import usePayments from "../../../pages/Hooks/usePayments/usePayments";
 const PaymentHistory = () => {
 
     const [payments] = usePayments()
+    console.log(payments);
 
 
     return (

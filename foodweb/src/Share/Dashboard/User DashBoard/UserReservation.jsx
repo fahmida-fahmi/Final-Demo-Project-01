@@ -87,7 +87,7 @@ const UserReservation = () => {
                     </div>
                     <div >
                         <label htmlFor="">Email*</label>
-                        <input type="text" placeholder='Email' name='email' defaultValue={user?.email} required />
+                        <input type="text"  name='email' value={user?.email} required />
                     </div>
                 </div>
                 <div className='text-center flex justify-center' >

@@ -6,16 +6,15 @@ import { FaUsers } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../pages/Hooks/useAuth/useAuth";
-import useCart from "../../../pages/Hooks/useCart/useAxiosCart";
-import useUsers from "../../../pages/Hooks/useUsers/useUsers";
 import { useEffect, useState } from "react";
+import useCart from "../../../pages/Hooks/useCart/useCart";
 
 const AdminDashboard = () => {
     const [checkUsers, setCheckUser] = useState([])
     const [cart] = useCart()
-    const [users] = useUsers()
+    // const [users] = useUsers()
     const { user, logOut } = useAuth()
-
+    console.log(cart.length);
     const userEmail = user.email
     console.log(userEmail);
 
@@ -29,17 +28,25 @@ const AdminDashboard = () => {
             })
     }, [])
 
+    console.log(checkUsers);
 
 
+    // const adminUser = checkUsers.find(({ user }) => {
+    //     if(user === userEmail){
+    //        console.log(user);
+    //        console.log(userEmail);
 
-    const adminUser = checkUsers.find(({ email }) => {
-        if(email === userEmail){
-           console.log(email);
-           console.log(userEmail);
-       }
-        
-    });
-    console.log(adminUser);
+    //    }
+
+    // });
+    const adminUser = checkUsers.find(user => user.email === userEmail && user.role === 'admin');
+    const normalUser = checkUsers.find(user => user.email === userEmail && user.role === 'user');
+    console.log(normalUser);
+    if (adminUser) {
+        console.log('Admin Role:', adminUser.role); // Log the role if adminUser is found
+    } else {
+        console.log('Admin user not found.'); // Log if adminUser is not found
+    }
 
     const handleSignOut = () => {
         logOut()
@@ -82,8 +89,8 @@ const AdminDashboard = () => {
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
 
                     <div className="px-8 pt-8">
-                        <h1 className="text-3xl">Bistro Boss</h1>
-                        <h1 className="text-2xl tracking-widest">Restaurant</h1>
+                        {/* <h1 className="text-3xl">Bistro Boss</h1> */}
+                        <h1 className="text-2xl tracking-widest">The Giving Plate</h1>
                     </div>
                     <ul className="menu p-4 w-80  text-[#151515] uppercase ">
                         {/* <div className="border-b border-white mb-12 pb-12">
@@ -116,33 +123,31 @@ const AdminDashboard = () => {
                         </div> */}
                         <div className="border-b border-white mb-12 pb-12">
                             {
-                                adminUser === 'user' ?
+                                adminUser &&
+                                <>
+                                    <li className='text-lg'><NavLink to='/dashboard/' className="hover:text-white"><BiSolidHome></BiSolidHome>Admin  Home</NavLink></li>
+                                    <li className='text-lg'><NavLink to='/dashboard/addItem' className="hover:text-white"><BiRestaurant></BiRestaurant> Add item</NavLink></li>
+                                    <li className='text-lg'><NavLink to='/dashboard/manageItem' className="hover:text-white"><TfiMenuAlt></TfiMenuAlt> manage items</NavLink></li>
+                                    <li className='text-lg'><NavLink to='/dashboard/manageBookings' className="hover:text-white"><FaBook></FaBook> manage bookings</NavLink>
 
-                                    <>
-                                        <li className='text-lg'><NavLink to='/dashboard/' className="hover:text-white"><BiSolidHome></BiSolidHome>user  Home</NavLink></li>
-                                        <li className='text-lg'><NavLink to='/dashboard/reservation' className="hover:text-white"><BiRestaurant></BiRestaurant> reservation</NavLink></li>
-                                        <li className='text-lg'><NavLink to='/dashboard/paymentHistory' className="hover:text-white"><TfiMenuAlt></TfiMenuAlt> payment history</NavLink></li>
-                                        <li className='text-lg'><NavLink to='/dashboard/myCart' className="hover:text-white"><FaBook></FaBook> my cart <span>{cart.length}</span></NavLink>
+                                    </li>
+                                    <li className='text-lg'><NavLink to='/dashboard/allUsers' className="hover:text-white"><FaUsers></FaUsers> all users</NavLink></li>
+                                </>
+                            }
+                            {
+                                normalUser &&
+                                <>
+                                    <li className='text-lg'><NavLink to='/dashboard/' className="hover:text-white"><BiSolidHome></BiSolidHome>user  Home</NavLink></li>
+                                    <li className='text-lg'><NavLink to='/dashboard/reservation' className="hover:text-white"><BiRestaurant></BiRestaurant> reservation</NavLink></li>
+                                    <li className='text-lg'><NavLink to='/dashboard/paymentHistory' className="hover:text-white"><TfiMenuAlt></TfiMenuAlt> payment history</NavLink></li>
+                                    <li className='text-lg'><NavLink to='/dashboard/myCart' className="hover:text-white"><FaBook></FaBook> my cart <span>{cart.length}</span></NavLink>
 
-                                        </li>
-                                        <li className='text-lg'><NavLink to='/dashboard/addReviews' className="hover:text-white"><FaUsers></FaUsers> add reviews</NavLink></li>
-                                        <li className='text-lg'><NavLink to='/dashboard/myBookings' className="hover:text-white"><FaUsers></FaUsers> my booking</NavLink></li>
-                                    </>
-                                    :
-
-                                    <>
-                                        <li className='text-lg'><NavLink to='/dashboard/' className="hover:text-white"><BiSolidHome></BiSolidHome>Admin  Home</NavLink></li>
-                                        <li className='text-lg'><NavLink to='/dashboard/addItem' className="hover:text-white"><BiRestaurant></BiRestaurant> Add item</NavLink></li>
-                                        <li className='text-lg'><NavLink to='/dashboard/manageItem' className="hover:text-white"><TfiMenuAlt></TfiMenuAlt> manage items</NavLink></li>
-                                        <li className='text-lg'><NavLink to='/dashboard/manageBookings' className="hover:text-white"><FaBook></FaBook> manage bookings</NavLink>
-
-                                        </li>
-                                        <li className='text-lg'><NavLink to='/dashboard/allUsers' className="hover:text-white"><FaUsers></FaUsers> all users</NavLink></li>
-                                    </>
+                                    </li>
+                                    <li className='text-lg'><NavLink to='/dashboard/addReviews' className="hover:text-white"><FaUsers></FaUsers> add reviews</NavLink></li>
+                                    <li className='text-lg'><NavLink to='/dashboard/myBookings' className="hover:text-white"><FaUsers></FaUsers> my booking</NavLink></li>
+                                </>
                             }
                             {/* Sidebar content here */}
-
-
                         </div>
                         <div className="border-b border-white mb-12 pb-12">
 

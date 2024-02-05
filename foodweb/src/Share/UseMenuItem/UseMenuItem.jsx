@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const UseMenuItem = () => {
     const [services, setServices] = useState([])
     const [newServices, setMenuServices] = useState([])
-    const category = ['offered', 'pizza', 'soup', 'salad', 'dessert', 'drinks']
+    const category = ['offered', 'main_course', 'soup', 'salad', 'desserts', 'drinks']
     useEffect(() => {
         fetch('http://localhost:8000/services')
             .then(res => res.json())

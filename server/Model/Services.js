@@ -1,17 +1,21 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose 
+const { Schema } = mongoose;
 
-const servicesSchema = new Schema({
-    _id: mongoose.Schema.Types.ObjectId,
-    name: String, 
-    recipe: String,
-    image: String,
-    category: String,
-    price: Number,
-},
-{timestamps: true}
-)
+const recipeSchema = new Schema({
+  recipe_name: String,
+  ingredients: [String],
+  approx_price_bdt: Number,
+  nutritional_value: {
+    calories: Number,
+    protein: Number,
+    carbohydrates: Number,
+    fat: Number,
+    fiber: Number,
+  },
+  image: String,
+  category: String,
+}, { timestamps: true });
 
-const Services = mongoose.model("services", servicesSchema)
+const Services = mongoose.model('services', recipeSchema);
 
-module.exports = Services
+module.exports = Services;

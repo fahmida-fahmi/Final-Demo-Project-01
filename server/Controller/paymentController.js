@@ -38,7 +38,7 @@ exports.postPaymentInfo = async (req, res) => {
 
 exports.getAllPayments = async(req, res) =>{
   const email = req.query.email;
-  console.log(email);
+  // console.log(email);
 
   if (!email) {
       res.send([]); // Send an empty response

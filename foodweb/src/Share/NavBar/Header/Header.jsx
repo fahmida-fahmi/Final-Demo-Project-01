@@ -42,8 +42,8 @@ const Header = () => {
         <div className='fixed top-0 z-10 w-full' style={{ background: 'rgba(21, 21, 21, 0.50)' }}>
             <div className='w-11/12 mx-auto flex justify-between uppercase py-3 '>
                 <div className='text-white  cinzel'>
-                    <h1>bistro boss</h1>
-                    <h1>restaurant</h1>
+                    <h1 className='text-3xl'>The Giving Plate</h1>
+                    
                 </div>
                 <div className='flex items-center inter '>
                     <ul className='flex'>
@@ -51,7 +51,7 @@ const Header = () => {
                         <li className='text-lg'><Link to='/contactUs'>contact us</Link></li>
                         <li className='text-lg'><Link to='/dashboard/'>dashboard</Link></li>
                         <li className='text-lg'><Link to='/ourMenu'>our menu</Link></li>
-                        {/* <li className='text-lg'><Link >Secret</Link></li> */}
+                        <li className='text-lg'><Link to='https://serving-smiles-client.vercel.app/'>Our Program </Link></li>
                         {/* <li className='text-lg'><Link to='/ourShop'>our shop</Link></li> */}
                     </ul>
                     <div className='w-10 relative'>

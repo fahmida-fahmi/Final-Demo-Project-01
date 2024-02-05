@@ -82,7 +82,7 @@ const Login = () => {
             console.log(err);
         })
     }
-    const validedCaptcha = (e) =>{
+    const validatedCaptcha = (e) =>{
         const user_captcha_value = e.target.value
         console.log(user_captcha_value);
         if (validateCaptcha(user_captcha_value)) {
@@ -114,13 +114,13 @@ const Login = () => {
                         </div>
                         <div>
                             <label className='label'><LoadCanvasTemplate/></label>
-                            <input type="text" placeholder='Type here' onBlur={validedCaptcha}/>
+                            <input type="text" placeholder='Type here' onBlur={validatedCaptcha}/>
                             {/* <button className='w-full btn btn-primary'>Validated</button> */}
                         </div>
                         {/* <input type='submit' disabled={disabled}  value='Sign In' className='w-full text-center mt-5 p-5 text-white text-xl font-bold rounded-lg cursor-pointer' style={{
                             background: 'rgba(209, 160, 84, 0.70)'
                         }}/> */}
-                        <button className='btn btn-primary w-full mt-5' disabled={false}>Sign In</button>
+                        <button className='btn btn-primary w-full mt-5' disabled ={disabled}>Sign In</button>
                     </form>
                     <div className='text-[#D1A054] text-center '>
                         <p className='my-3'>New here? <Link to='/register' className='font-bold'>Create a New Account</Link></p>
